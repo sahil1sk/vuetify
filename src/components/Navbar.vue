@@ -50,6 +50,9 @@
                     The Net Ninja
                 </p>
             </v-col>
+            <v-col class="mt-4 mb-3">
+                <Popup />
+            </v-col>
         </div>
         <v-list>
             <v-list-item v-for="(link, i) in links" :key="i" router :to="link.route">
@@ -71,7 +74,10 @@
 </template>
 
 <script>
+import Popup from './Popup.vue'
+
 export default {
+    components: { Popup },
     data() {
         return {
             drawer: false,
