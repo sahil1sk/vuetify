@@ -8,6 +8,32 @@
             <span>Ninja</span>
         </v-toolbar-title>
         <v-spacer></v-spacer>
+
+        <div class="text-center">
+            <v-menu offset-y>
+            <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                depressed
+                v-bind="attrs"
+                v-on="on"
+                class="grey--text"
+                >
+                <v-icon left>expand_more</v-icon>
+                <span>Menu</span>
+                </v-btn>
+            </template>
+            <v-list>
+                <v-list-item
+                v-for="(link, index) in links"
+                :key="index"
+                router :to="link.route"
+                >
+                <v-list-item-title>{{ link.text }}</v-list-item-title>
+                </v-list-item>
+            </v-list>
+            </v-menu>
+        </div>
+
         <v-btn depressed class="transparent text--grey font-weight-light">
             <span>Sign Out</span>
             <v-icon right>exit_to_app</v-icon>
