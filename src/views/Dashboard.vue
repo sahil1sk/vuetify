@@ -3,30 +3,27 @@
     <h1 class="subheading grey--text">Dashboard</h1>
 
     <v-container class="my-5">
-    
-      <v-layout row wrap>
-        <v-flex xs12 md6> <!-- on small screen 12 column on medium tak 6 column-->
-          <v-btn outlined block class="primary--text ma-1">1</v-btn>
-        </v-flex>
-        <v-flex xs4 md2>
-          <v-btn outlined block class="primary--text ma-1">1</v-btn>
-        </v-flex>
-        <v-flex xs4 md2>
-          <v-btn outlined block class="primary--text ma-1">1</v-btn>
-        </v-flex>
-        <v-flex xs4 md2>
-          <v-btn outlined block class="primary--text ma-1">1</v-btn>
-        </v-flex>
-      </v-layout>
-
-      <v-layout row wrap justify-space-around>
-        <v-flex xs4 md3>
-          <v-btn outlined block class="success-text ma-1">1</v-btn>
-        </v-flex>
-        <v-flex xs4 md3>
-          <v-btn outlined block class="success-text ma-1">2</v-btn>
-        </v-flex>
-      </v-layout>
+      
+      <v-card flat class="pa-3">
+        <v-row>
+          <v-col xs="12" md="6">
+            <div class="caption grey--text">Project Title</div>
+            <div>Create a new website</div>
+          </v-col>
+          <v-col xs="6" sm="4" md="2">
+            <div class="caption grey--text">Person</div>
+            <div>The Net Ninja</div>
+          </v-col>
+          <v-col xs="6" sm="4" md="2">
+            <div class="caption grey--text">Due by</div>
+            <div>1st Jan 2019</div>
+          </v-col>
+          <v-col xs="2" sm="4" md="2">
+            <div class="caption grey--text">Status</div>
+            <div>ongoing</div>
+          </v-col>
+        </v-row>
+      </v-card>
     
     </v-container>
 
