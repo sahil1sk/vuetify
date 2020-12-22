@@ -1,5 +1,5 @@
 <template>
-  <v-dialog max-width="600px">
+  <v-dialog max-width="600px" v-model="dialog">
     <template v-slot:activator="{ on, attrs }">
         
         <v-btn 
@@ -50,13 +50,15 @@ export default {
             due: null,
             inputRules: [
                 v => v.length >= 3 || 'Minimum length is 3 characters'
-            ]
+            ],
+            dialog: false,
         }
     },
     methods: {
         submit() {
             if(this.$refs.form.validate()){
                 console.log(this.title, this.content)
+                this.dialog = false;
             }        
         }
     }
